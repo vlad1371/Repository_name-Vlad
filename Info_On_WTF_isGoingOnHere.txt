@@ -40,6 +40,9 @@ git diff example1.txt - to see what has been changed but hasn't been commited ye
 1.Create a random txt file: touch supersecret.txt
 2.Create the gitignore file : touch .gitignore - in this file we will write the supersecret.txt
 nano .gitignore - supersecret.txt (added a new line supersecret.txt)
+-
+cat supersecret.txt                                             vlad1371@ubuntu
+password12345
 
 -Lets see that status of our git files now, we have 4 files but there is no supersecret.txt:
 git status
@@ -52,4 +55,22 @@ Info_On_WTF_isGoingOnHere.txt
 ls
 Info_On_WTF_isGoingOnHere.txt  INFO.txt  README.md  supersecret.txt  vlad.txt
 
--If we didn
+-If we want to commit these files, there will be 4 files, without the supersecret.txt:
+git commit -m "adding new files"
+create mode 100644 .INFo.swp
+create mode 100644 .gitignore
+create mode 100644 INFO.txt
+create mode 100644 Info_On_WTF_isGoingOnHere.txt
+
+-Lets push them to GitHub now:
+git push -u origin main
+
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 1.51 KiB | 1.51 MiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To https://github.com/vlad1371/Repository_name-Vlad.git
+   17bbf13..50f70a9  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
