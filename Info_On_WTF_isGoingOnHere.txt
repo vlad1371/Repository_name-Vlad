@@ -1,0 +1,55 @@
+-make a directory:
+mkdir First_GitHUB_File
+
+-after you created a GitHub repository on the site, get a clone of it:
+git clone https://github.com/vlad1371/Repository_name-Vlad.git
+
+-create a txt and make changes into it, how many you want, lets say we made 5 changes:
+This is some example to work with. 
+This is some local change i have made.
+This is some more changes.
+Blah blah blah.
+This is the final change.
+
+-for each change you must:
+1.stage your file, track the file - git add filename or git 
+add .(. means for all the files within your directory).
+2.commit your file - git commit -m "Commiting some more local changes" filename or .
+
+-in order to push our changes to github we need to:
+git push -u origin main
+-it will ask for a username and a password everytime we want to push new changes to GitHub
+username = stanciu.vl...
+password = here we need to create a new token on  https://github.com/settings/tokens in order to be
+able to login, paste the token here and you'll successfully added the changes to GitHub
+
+-if you want to store your login credentials you can give this command:
+git config --global credential.helper store
+- this will save your username and passwowrd 
+
+Commands that are usefull:
+#1. git config --global user.name "vlad1371"
+#2. git config --global user.email stanciu.vlad.adrian@gmail.com
+
+-when we clone a file from GitHub, there is no need to init anymore, it's already init
+git init
+git status
+git diff example1.txt - to see what has been changed but hasn't been commited yet
+
+-we can create an invisible file that we may don'y want to push it through GitHib:
+1.Create a random txt file: touch supersecret.txt
+2.Create the gitignore file : touch .gitignore - in this file we will write the supersecret.txt
+nano .gitignore - supersecret.txt (added a new line supersecret.txt)
+
+-Lets see that status of our git files now, we have 4 files but there is no supersecret.txt:
+git status
+.INFo.swp
+.gitignore
+INFO.txt
+Info_On_WTF_isGoingOnHere.txt
+
+-Look at the files we have in our current directory, notice there is supersecret.txt:
+ls
+Info_On_WTF_isGoingOnHere.txt  INFO.txt  README.md  supersecret.txt  vlad.txt
+
+-If we didn
