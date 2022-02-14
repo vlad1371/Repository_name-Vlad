@@ -2,3 +2,4 @@ This is some example to work with.
 This is some local change i have made.
 This is some more changes.
 Blah blah blah.
+This is the final change.
